@@ -1,0 +1,158 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 420px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h2 { color: var(--tx, #fff); font-size: 20px; font-weight: 700; }
+.closeBtn {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.4);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.productRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+  padding: 12px;
+}
+.productImg { width: 52px; height: 52px; border-radius: 10px; object-fit: cover; }
+.productName { color: var(--tx, #fff); font-size: 14px; font-weight: 500; }
+.productPrice { color: #716BC9; font-size: 18px; font-weight: 700; }
+
+.tabs { display: flex; gap: 8px; }
+.tab {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: transparent;
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.tabActive { background: #716BC9; border-color: #716BC9; color: #fff; }
+
+.fees { display: flex; flex-direction: column; gap: 6px; }
+.feeRow {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255,255,255,0.45);
+  font-size: 13px;
+}
+.feeTotal {
+  color: var(--tx, #fff);
+  font-size: 15px;
+  font-weight: 600;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 8px;
+  margin-top: 4px;
+}
+
+.cardForm { display: flex; flex-direction: column; gap: 0; }
+.field { margin-bottom: 12px; }
+.field label {
+  color: rgba(255,255,255,0.4);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 6px;
+}
+.field input {
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 11px 14px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s;
+}
+.field input:focus { border-color: #716BC9; }
+.field input::placeholder { color: rgba(255,255,255,0.2); }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.note { color: rgba(255,255,255,0.35); font-size: 12px; text-align: center; line-height: 1.6; }
+.error { color: #E01A4F; font-size: 13px; text-align: center; }
+
+.payBtn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #716BC9, #8B416F);
+  border: none;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.payBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.yappyBtn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #00C851, #007E33);
+  border: none;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.paypalBtn {
+  width: 100%;
+  padding: 15px;
+  background: #FFC439;
+  border: none;
+  border-radius: 14px;
+  color: #003087;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.success {
+  text-align: center;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.successIcon { font-size: 48px; }
+.success h3 { color: var(--tx, #fff); font-size: 18px; font-weight: 700; }
+.success p { color: rgba(255,255,255,0.45); font-size: 14px; line-height: 1.6; }
